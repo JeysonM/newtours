@@ -19,7 +19,7 @@ Scenario: Register a user on site
 		And send my registration form
 		Then the confirmation screen is show
 		And my user name is "Pepazo"
-		
+
 
 Scenario: Register a user on site
 	Given I am on the Mercury Tours homepage
@@ -44,6 +44,27 @@ Scenario: Register a user empty on site
     |User Name: 	    	|         |
     |Password:          |         |
     |Confirm Password:  |         |
+		And send my registration form
+		Then the confirmation screen is show
+		And my user name is ""
+
+
+Scenario: Register a user with the confirm pass different that pass on site
+  Given I am on the Mercury Tours homepage
+  And I click the "Register" link
+	When I enter the required fields as show below
+		|First Name: 	    	|         |
+    |Last Name: 	    	|         |
+    |Phone: 	        	|         |
+    |Email: 	        	|         |
+    |Address:           |         |
+    |City: 	            |         |
+    |State/Province:    |         |
+    |Postal Code: 	    |         |
+    |Country: 	        | UNITED STATES        |
+    |User Name: 	    	|         |
+    |Password:          | juanito123        |
+    |Confirm Password:  | juanito        |
 		And send my registration form
 		Then the confirmation screen is show
 		And my user name is ""
