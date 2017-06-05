@@ -4,7 +4,8 @@ Given(/^I am on the Find Flight page$/) do
 end
 
 When(/^Press continue$/) do
-  click_on("findFlights")
+  xpath = 'html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[14]/td/input'
+  find(:xpath, xpath).click
 end
 
 When(/^I enter the required fields as show below here$/) do  |table|
