@@ -3,11 +3,11 @@ Given(/^I am on the Find Flight page$/) do
      visit ('http://newtours.demoaut.com/mercuryreservation.php')
 end
 
-When(/^press continue$/) do
+When(/^Press continue$/) do
   click_on("findFlights")
 end
 
-When(/^I enter the required fields as show below here$/) do
+When(/^I enter the required fields as show below here$/) do  |table|
   data = table.rows_hash
   data.each_pair do |key, value|
     case key
@@ -33,4 +33,8 @@ When(/^I enter the required fields as show below here$/) do
           select(value, :from => 'airline')
       end
     end
+end
+
+Then(/^the flights are shown on the screen$/) do
+  pending # Write code here that turns the phrase above into concrete actions
 end
