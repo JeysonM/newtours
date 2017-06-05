@@ -18,12 +18,14 @@ When(/^I enter the required fields as show below here$/) do  |table|
           choose("passCount", option:  value)
       when "fromPort"
           select(value, :from => 'fromPort')
+          @fromPort = value
       when "fromMonth"
           select(value, :from => 'fromMonth')
       when "fromDay"
           select(value, :form => 'fromDay')
       when "toPort"
           select(value, :from => 'toPort')
+          @toPort = value
       when "toMonth"
           select(value, :from => 'toMonth')
       when "toDay"
@@ -37,5 +39,6 @@ When(/^I enter the required fields as show below here$/) do  |table|
 end
 
 Then(/^the flights are shown on the screen$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  goingPorts = @fromPort+"to"+@toPort
+  expect(page).to have_content(goingPorts)
 end
