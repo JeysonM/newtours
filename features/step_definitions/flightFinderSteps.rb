@@ -19,25 +19,25 @@ When(/^I enter the required fields as show below here$/) do  |table|
     case key
     	when "tripType:"
         	choose("tripType", option:  value)
-      when "passCount"
+      when "passCount:"
           choose("passCount", option:  value)
-      when "fromPort"
+      when "fromPort:"
           select(value, :from => 'fromPort')
           @fromPort = value
-      when "fromMonth"
+      when "fromMonth:"
           select(value, :from => 'fromMonth')
-      when "fromDay"
+      when "fromDay:"
           select(value, :form => 'fromDay')
-      when "toPort"
+      when "toPort:"
           select(value, :from => 'toPort')
           @toPort = value
-      when "toMonth"
+      when "toMonth:"
           select(value, :from => 'toMonth')
-      when "toDay"
+      when "toDay:"
           select(value, :from => 'toDay')
-      when "servClass"
+      when "servClass:"
           choose("servClass", option:  value)
-      when "airline"
+      when "airline:"
           select(value, :from => 'airline')
       end
     end
