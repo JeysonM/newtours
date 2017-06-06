@@ -1,4 +1,7 @@
 Feature: Sign on to Mercury Tours
+  In order to verify that the system allows sign on correctly
+  As registered user
+  I want sign in
 
 Scenario: Find a flight with a register user
   Given I am on the Mercury Tours homepage

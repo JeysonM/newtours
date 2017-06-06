@@ -1,4 +1,7 @@
 Feature: Flight finder Verify Select Flight
+  In order to verify that the system finds flights with the selected characteristics
+  As a registered user
+  I want to look for a flight
 
 Scenario: Select a Flight with a registered user
     Given I am on the Mercury Tours homepage

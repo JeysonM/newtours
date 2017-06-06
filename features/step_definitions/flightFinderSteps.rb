@@ -39,6 +39,6 @@ When(/^I enter the required fields as show below here$/) do  |table|
 end
 
 Then(/^the flights are shown on the screen$/) do
-  goingPorts = @fromPort+"to"+@toPort
+  goingPorts = @fromPort+" to "+@toPort
   expect(page).to have_content(goingPorts)
 end
