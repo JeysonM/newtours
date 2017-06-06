@@ -45,7 +45,7 @@ end
 
 Then(/^the going flights are shown on the screen as follows$/) do  |table|
   data = table.rows_hash
-  goingPorts = @fromPort+"to"+@toPort
+  goingPorts = ""+@fromPort+"to"+@toPort
   expect(page).to have_content(goingPorts)
   rowPricesCounter = 4
   divAerloinesCounter = 3
@@ -66,7 +66,7 @@ end
 
 Then(/^the back flights are shown on the screen as follows$/) do  |table|
   data = table.rows_hash
-  goingPorts = @fromPort+"to"+@toPort
+  goingPorts = ""+@toPort+" to "+@fromPort
   expect(page).to have_content(goingPorts)
   rowPricesCounter = 4
   divAerloinesCounter = 3
