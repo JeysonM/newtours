@@ -19,6 +19,8 @@ Capybara.default_max_wait_time = 15
 Capybara.default_driver = :selenium
 Capybara.app_host = "http://www.google.com"
 
+
+
 class CapybaraDriverRegistrar
   # register a Selenium driver for the given browser to run on the localhost
   def self.register_selenium_driver(browser)
