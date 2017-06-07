@@ -18,9 +18,9 @@ When(/^I enter the required fields as show below here$/) do  |table|
   data.each_pair do |key, value|
     case key
     	when "tripType:"
-        	choose("tripType", option:  value)
+        	choose('tripType', option:  value)
       when "passCount:"
-          choose("passCount", option:  value)
+          select(value, :from => 'passCount')
       when "fromPort:"
           select(value, :from => 'fromPort')
           @fromPort = value
