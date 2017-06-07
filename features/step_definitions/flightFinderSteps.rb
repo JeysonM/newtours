@@ -95,8 +95,8 @@ Then(/^the flights and prices are shown on the screen as follows$/) do |table|
   data = table.rows_hash
   firstkey = "Blue Skies Airlines 360"
   secondkey = "Blue Skies Airlines 630"
-  firstValue = "Price: $270"
-  secondValue = "Price: $270"
+  firstValue = "270"
+  secondValue = "270"
   xpathBase = '/html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody'
   xpathBase = find(:xpath, xpathBase)
   xpathFirstKey = './tr[3]/td[1]/font/b'
@@ -112,7 +112,11 @@ Then(/^the flights and prices are shown on the screen as follows$/) do |table|
 end
 
 Then(/^the price with taxes is shown$/) do
-  expect(page).to have_content("$584")
+  price = "$584"
+  xpathBase = '/html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody'
+  xpathValue = './tr[9]/td[2]/font/b'
+  xpathBase = find(:xpath, xpathBase)
+  expect(xpathBase.find(:xpath, xpathValue)).to have_content(price)
 end
 
 Then(/^I fill the buy form with the following values$/) do |table|
