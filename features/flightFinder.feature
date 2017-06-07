@@ -89,7 +89,7 @@ Scenario: See purchased Flight transaction filling nothing on the purchase with 
     And the Itinerary booked message is shown
     And the values inserted for the are shown
 
-Scenario: See purchased Flight transaction with the credit number wrongs of a registered user
+Scenario: See purchased Flight transaction with the credit number with letters of a registered user
     Given the going flights are shown on the screen as follows
       |Blue Skies Airlines 360  |Price: $270|
       |Blue Skies Airlines 361  |Price: $271|

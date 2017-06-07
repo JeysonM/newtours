@@ -3,10 +3,11 @@ Feature: Flight finder Verify Take Flights
   As a registered user
   I want to look for a flight
 
+Background:
+          Given I am a user on the Mercury Tours homepage
 
 Scenario: See the economic class flights available from Acapulco to Portland and return
-    Given I am a user on the Mercury Tours homepage
-    And I enter my user and password
+    Given I enter my user and password
     And I press the "Sign-In" button
     When I enter the required fields as show below here
       |tripType:  | roundtrip     |
@@ -32,8 +33,7 @@ Scenario: See the economic class flights available from Acapulco to Portland and
       |Unified Airlines 633     |Price: $303|
 
 Scenario: See the business class flights available from Acapulco to London and return
-    Given I am a user on the Mercury Tours homepage
-    And I enter my user and password
+    Given I enter my user and password
     And I press the "Sign-In" button
     When I enter the required fields as show below here
       |tripType:  | roundtrip     |
@@ -59,8 +59,7 @@ Scenario: See the business class flights available from Acapulco to London and r
       |Unified Airlines 633     |Price: $303|
 
 Scenario: See the First Class flights available from Frankfurt to Sydney and return
-    Given I am a user on the Mercury Tours homepage
-    And I enter my user and password
+    Given I enter my user and password
     And I press the "Sign-In" button
     When I enter the required fields as show below here
       |tripType:  | roundtrip     |
@@ -86,8 +85,7 @@ Scenario: See the First Class flights available from Frankfurt to Sydney and ret
       |Unified Airlines 633     |Price: $303|
 
 Scenario: See the flights available without changing any field on the request
-    Given I am a user on the Mercury Tours homepage
-    And I enter my user and password
+    Given I enter my user and password
     And I press the "Sign-In" button
     When I Press continue
     Then the going flights are shown on the screen as default
@@ -103,14 +101,12 @@ Scenario: See the flights available without changing any field on the request
 
 
 Scenario: Not see flights with the not logged-in user
-    Given I am a user on the Mercury Tours homepage
-    When I click the "Flights" link
-    Then the Home Page screen is show
-    And the link SIGN-ON is on
+    Given I click the "Flights" link
+    When the Home Page screen is show
+    Then the link SIGN-ON is on
 
 Scenario: see flights with the logged-in user
-    Given I am a user on the Mercury Tours homepage
-    And I enter my user and password
+    Given I enter my user and password
     And I press the "Sign-In" button
     When I click the "Flights" link
     Then the Flight Finder screen is show
