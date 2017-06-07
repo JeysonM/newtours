@@ -8,7 +8,7 @@ Given(/^I am a user on the Mercury Tours homepage$/) do
      visit ('http://newtours.demoaut.com/')
 end
 
-When(/^Press continue$/) do
+When(/^I Press continue$/) do
   xpath = 'html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[14]/td/input'
   find(:xpath, xpath).click
 end
