@@ -27,7 +27,7 @@ When(/^I enter the required fields as show below here$/) do  |table|
       when "fromMonth:"
           select(value, :from => 'fromMonth')
       when "fromDay:"
-          select(value, :form => 'fromDay')
+          select(value, :from => 'fromDay')
       when "toPort:"
           select(value, :from => 'toPort')
           @toPort = value
