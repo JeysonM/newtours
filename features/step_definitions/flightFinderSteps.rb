@@ -202,3 +202,19 @@ Then(/^the values inserted for the are shown$/) do
   expect(page).to have_content(@billAddress)
   expect(page).to have_content(@delAddress)
 end
+
+# When(/^I click the "([^"]*)" link$/) do |linkText|
+#   click_link(linkText)
+# end
+
+Then(/^the Home Page screen is show$/) do
+  expect(page).to have_content("SIGN-ON")
+end
+
+Then(/^the link SIGN-OFF is on$/) do
+  expect(page).to have_content("SIGN-OFF")
+end
+
+Then(/^the link SIGN-ON is on$/) do
+  expect(page).to have_content("SIGN-ON")
+end

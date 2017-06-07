@@ -88,3 +88,32 @@ Scenario: See purchased Flight transaction filling nothing on the purchase with 
     Then I press the Secure purchase button for confirm
     And the Itinerary booked message is shown
     And the values inserted for the are shown
+
+Scenario: See purchased Flight transaction with the credit number wrongs of a registered user
+    Given the going flights are shown on the screen as follows
+      |Blue Skies Airlines 360  |Price: $270|
+      |Blue Skies Airlines 361  |Price: $271|
+      |Pangaea Airlines 362     |Price: $274|
+      |Unified Airlines 363     |Price: $281|
+    And the back flights are shown on the screen as follows
+      |Blue Skies Airlines 630  |Price: $270|
+      |Blue Skies Airlines 631  |Price: $273|
+      |Pangea Airlines 632      |Price: $282|
+      |Unified Airlines 633     |Price: $303|
+    When I press the continue button down
+    And the flights and prices are shown on the screen as follows
+      |Blue Skies Airlines 360  |Price: $270|
+      |Blue Skies Airlines 630  |Price: $270|
+    And the price with taxes is shown
+    And I fill the buy form with the following values
+      |passFirst0   | Pepito|
+      |passLast0    | Perez |
+      |creditnumber | creditcard |
+      |cc_frst_name | Pepito|
+      |cc_mid_name  | Pedro |
+      |cc_last_name | Perez |
+      |billAddress1 | 123 Av. America   |
+      |delAddress1  | 123 Av. Santa Cruz|
+    Then I press the Secure purchase button for confirm
+    And the Itinerary booked message is shown
+    And the values inserted for the are shown

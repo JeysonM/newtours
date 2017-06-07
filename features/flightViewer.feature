@@ -100,3 +100,18 @@ Scenario: See the flights available without changing any field on the request
       |Blue Skies Airlines 631  |Price: $273|
       |Pangea Airlines 632      |Price: $282|
       |Unified Airlines 633     |Price: $303|
+
+
+Scenario: Not see flights with the not logged-in user
+    Given I am a user on the Mercury Tours homepage
+    When I click the "Flights" link
+    Then the Home Page screen is show
+    And the link SIGN-ON is on
+
+Scenario: see flights with the logged-in user
+    Given I am a user on the Mercury Tours homepage
+    And I enter my user and password
+    And I press the "Sign-In" button
+    When I click the "Flights" link
+    Then the Flight Finder screen is show
+    And the link SIGN-OFF is on

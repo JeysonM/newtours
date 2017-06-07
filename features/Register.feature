@@ -31,26 +31,6 @@ Scenario: Register a user on site
 	When I press the Submit button
   Then the Flight Finder screen is show
 
-Scenario: Register a user empty on site
-  Given I am on the Mercury Tours homepage
-  And I click the "Register" link
-	When I enter the required fields as show below
-		|First Name: 	    	|         |
-    |Last Name: 	    	|         |
-    |Phone: 	        	|         |
-    |Email: 	        	|         |
-    |Address:           |         |
-    |City: 	            |         |
-    |State/Province:    |         |
-    |Postal Code: 	    |         |
-    |Country: 	        | UNITED STATES        |
-    |User Name: 	    	|         |
-    |Password:          |         |
-    |Confirm Password:  |         |
-		And send my registration form
-		Then the confirmation screen is show
-		And my user name is ""
-
 
 Scenario: Register a user with the confirm pass different that pass on site
   Given I am on the Mercury Tours homepage
@@ -144,7 +124,7 @@ Scenario: Register a user with password of one character on site
 		|Address:           |  Av. Libertador   |
 		|City: 	            |  COCHABAMBA       |
 		|State/Province:    |  COCHABAMBA       |
-		|Postal Code: 	    |  code32           |
+		|Postal Code: 	    |  9897             |
 		|Country: 	        |  BOLIVIA	        |
 		|User Name: 	    	|  Pedrerol         |
 		|Password:          |  2        |
