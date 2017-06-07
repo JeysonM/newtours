@@ -93,12 +93,22 @@ end
 
 Then(/^the flights and prices are shown on the screen as follows$/) do |table|
   data = table.rows_hash
-  data.each_pair do |key, value|
-        expect(page).to have_content(value)
-  end
-  data.each_pair do |key, value|
-        expect(page).to have_content(key)
-  end
+  firstkey = "Blue Skies Airlines 360"
+  secondkey = "Blue Skies Airlines 630"
+  firstValue = "Price: $270"
+  secondValue = "Price: $270"
+  xpathBase = '/html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody'
+  xpathBase = find(:xpath, xpathBaseKeys)
+  xpathFirstKey = './tr[3]/td[1]/font/b'
+  xpathScondKey = './tr[6]/td[1]/font/font/font[1]/b'
+  xpathFirstValue = './tr[3]/td[3]/font'
+  xpathSecondValue = './tr[6]/td[3]/font'
+  expect(xpathBase.find(:xpath, xpathFirstKey)).to have_content(firstkey)
+  expect(xpathBase.find(:xpath, xpathScondKey)).to have_content(secondkey)
+  expect(xpathBase.find(:xpath, xpathFirstValue)).to have_content(firstValue)
+  expect(xpathBase.find(:xpath, xpathSecondValue)).to have_content(secondValue)
+
+
 end
 
 Then(/^the price with taxes is shown$/) do
