@@ -161,8 +161,6 @@ Then(/^the Itinerary booked message is shown$/) do
 end
 
 Then(/^the values inserted for the are shown$/) do
-  expect(page).to have_content(@passFirstname)
-  expect(page).to have_content(@passLastname)
   expect(page).to have_content(@creditFirstName)
   expect(page).to have_content(@creditMidName)
   expect(page).to have_content(@creditLastName)
