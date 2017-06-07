@@ -5,7 +5,7 @@ require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
 
 #PTravel Settings
-ENV['USER']="Rosquete"
+ENV['USER']="Pepe"
 ENV['PSW']="Rosquete123"
 
 

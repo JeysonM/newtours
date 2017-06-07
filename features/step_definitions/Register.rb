@@ -69,7 +69,7 @@ When(/^I press the "([^"]*)" button$/) do |arg1|
   find(:xpath, xpath).click
 end
 
-Then(/^the Fight Finder screen is show$/) do
+Then(/^the Flight Finder screen is show$/) do
   expect(page).to have_content("Flight Details")
 end
 
