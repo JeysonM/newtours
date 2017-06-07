@@ -98,7 +98,7 @@ Then(/^the flights and prices are shown on the screen as follows$/) do |table|
   firstValue = "Price: $270"
   secondValue = "Price: $270"
   xpathBase = '/html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody'
-  xpathBase = find(:xpath, xpathBaseKeys)
+  xpathBase = find(:xpath, xpathBase)
   xpathFirstKey = './tr[3]/td[1]/font/b'
   xpathScondKey = './tr[6]/td[1]/font/font/font[1]/b'
   xpathFirstValue = './tr[3]/td[3]/font'
