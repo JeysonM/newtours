@@ -50,7 +50,6 @@ Then(/^the going flights are shown on the screen as follows$/) do  |table|
   rowPricesCounter = 4
   divAerloinesCounter = 3
   xpathBase = 'html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/'
-  xpathBase = find(:xpath, xpathBase)
   xpathGrandTotalPrices = './tr[%i]/td/font/font/b'
   xpathGrandTotalAerolines = '/tr[%i]/td[2]/font/b'
   data.each_pair do |key, value|
@@ -71,7 +70,6 @@ Then(/^the back flights are shown on the screen as follows$/) do  |table|
   rowPricesCounter = 4
   divAerloinesCounter = 3
   xpathBase = 'html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[2]/tbody'
-  xpathBase = find(:xpath, xpathBase)
   xpathGrandTotalPrices = './tr[%i]/td/font/font/b'
   xpathGrandTotalAerolines = '/tr[%i]/td[2]/font/b'
   data.each_pair do |key, value|
