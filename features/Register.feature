@@ -124,11 +124,31 @@ Scenario: Register a user with the Postal Code wrongs on site
 		|Address:           |  Av. Libertador   |
 		|City: 	            |  COCHABAMBA       |
 		|State/Province:    |  COCHABAMBA       |
-		|Postal Code: 	    |  code32             |
+		|Postal Code: 	    |  code32           |
 		|Country: 	        |  BOLIVIA	        |
 		|User Name: 	    	|  Pedrerol         |
 		|Password:          |  Pedro.123        |
 		|Confirm Password:  |  Pedro.123        |
+		And send my registration form
+		Then the confirmation screen is show
+		And my user name is "Pedrerol"
+
+Scenario: Register a user with password of one character on site
+	Given I am on the Mercury Tours homepage
+	And I click the "Register" link
+	When I enter the required fields as show below
+		|First Name: 	    	|  Pedro            |
+		|Last Name: 	    	|  Caceres          |
+		|Phone: 	        	|  1234-567-12      |
+		|Email: 	        	|  pedro@caceres.com  |
+		|Address:           |  Av. Libertador   |
+		|City: 	            |  COCHABAMBA       |
+		|State/Province:    |  COCHABAMBA       |
+		|Postal Code: 	    |  code32           |
+		|Country: 	        |  BOLIVIA	        |
+		|User Name: 	    	|  Pedrerol         |
+		|Password:          |  2        |
+		|Confirm Password:  |  2        |
 		And send my registration form
 		Then the confirmation screen is show
 		And my user name is "Pedrerol"
