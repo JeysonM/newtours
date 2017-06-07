@@ -9,6 +9,7 @@ After do |scenario|
     page.driver.browser.save_screenshot("#{scenario.__id__}.png")
     embed("#{scenario.__id__}.png", "image/png","Screenshoot failed scenario")
   end
+end
 
 
 
