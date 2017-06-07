@@ -63,12 +63,12 @@ Scenario: See the flights available without changing any field on the request
     And I enter my user and password
     And I press the "Sign-In" button
     When I Press continue
-    Then the going flights are shown on the screen as follows
+    Then the going flights are shown on the screen as default
       |Blue Skies Airlines 360  |Price: $270|
       |Blue Skies Airlines 361  |Price: $271|
       |Pangaea Airlines 362     |Price: $274|
       |Unified Airlines 363     |Price: $281|
-    And the back flights are shown on the screen as follows
+    And the back flights are shown on the screen as default
       |Blue Skies Airlines 630  |Price: $270|
       |Blue Skies Airlines 631  |Price: $273|
       |Pangea Airlines 632      |Price: $282|
